@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> id </th>
+        <th> Brand </th>
+        <th> Owner </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${cars.empty}">
+        <td colspan="2"> No Carss Available </td>
+    </tr>
+    <tr th:each="car : ${cars}">
+        <td><span th:text="${car.id}"> id </span></td>
+        <td><span th:text="${car.brand}"> Brand </span></td>
+        <td><span th:text="${car.owner}"> Owner </span></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<a href="/"> Back to main paige </a>
+</body>
+</html>
