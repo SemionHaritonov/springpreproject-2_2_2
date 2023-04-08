@@ -1,11 +1,11 @@
 package ru.stud.homer.springpreproject.repositories;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import ru.stud.homer.springpreproject.models.Car;
 
 import java.util.List;
 
-public interface CarRepository extends CrudRepository<Car, Long> {
-    @Override
-    List<Car> findAll();
+@Repository
+public interface CarRepository extends JpaRepository<Car, Long> {
 }

@@ -14,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:if="${cars.empty}">
+    <tr th:if="${cars.isEmpty()}">
         <td colspan="2"> No Carss Available </td>
     </tr>
     <tr th:each="car : ${cars}">

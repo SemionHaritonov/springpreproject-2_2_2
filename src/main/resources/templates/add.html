@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add car</title>
 </head>
 <body>
-<form method="post">
+<form th:method="post">
   <label for="brand">Brand:</label>
   <input type="text" id="brand" name="brand">
+    <div style="color:red" th:if="${#fields.hasErrors('brand')}">Brand Error</div>
   <label for="owner">Owner:</label>
   <input type="text" id="owner" name="owner">
+    <div style="color:red" th:if="${#fields.hasErrors('owner')}">Owner Error</div>
   <button type="submit" value="Add car"> Add </button>
   <br>
   <a href="/"> Back to main paige </a>

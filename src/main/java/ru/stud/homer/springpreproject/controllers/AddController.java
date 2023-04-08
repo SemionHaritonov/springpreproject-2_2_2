@@ -8,18 +8,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.stud.homer.springpreproject.models.Car;
 import ru.stud.homer.springpreproject.repositories.CarRepository;
+import ru.stud.homer.springpreproject.services.CarService;
 
 @Controller
 public class AddController {
     @Autowired
-    private CarRepository carRepository;
+    private CarService carService;
 
     @PostMapping("/add")
     public String add(@RequestParam(value = "brand", required = true) String brand,
-                      @RequestParam(value = "owner", required = true) String owner,
-                      Model model) {
-        Car car = new Car(brand, owner);
-        carRepository.save(car);
+                      @RequestParam(value = "owner", required = true) String owner) {
+        carService.addCar(brand, owner);
         return "add";
     }
 
