@@ -8,10 +8,8 @@
 <form th:method="post">
   <label for="brand">Brand:</label>
   <input type="text" id="brand" name="brand">
-    <div style="color:red" th:if="${#fields.hasErrors('brand')}">Brand Error</div>
   <label for="owner">Owner:</label>
   <input type="text" id="owner" name="owner">
-    <div style="color:red" th:if="${#fields.hasErrors('owner')}">Owner Error</div>
   <button type="submit" value="Add car"> Add </button>
   <br>
   <a href="/"> Back to main paige </a>
