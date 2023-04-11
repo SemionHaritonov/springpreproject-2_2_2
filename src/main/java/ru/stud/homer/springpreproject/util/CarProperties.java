@@ -1,6 +1,5 @@
 package ru.stud.homer.springpreproject.util;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +7,7 @@ import java.util.List;
 
 @Component
 @ConfigurationProperties(prefix = "util")
-public class Util {
+public class CarProperties {
     private int maxCar;
     private List<String> filters;
 

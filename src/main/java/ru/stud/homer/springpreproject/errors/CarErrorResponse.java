@@ -1,4 +1,4 @@
-package ru.stud.homer.springpreproject.util;
+package ru.stud.homer.springpreproject.errors;
 
 public class CarErrorResponse {
     private String message;

@@ -1,4 +1,4 @@
-package ru.stud.homer.springpreproject.util;
+package ru.stud.homer.springpreproject.exceptions;
 
 public class CarBadFilterException extends RuntimeException{
 }
